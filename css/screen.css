@@ -1,7 +1,18 @@
 /*------------------------------------*\
   #FONTS
 \*------------------------------------*/
-
+@font-face {
+    font-family: 'HK Grotesk Web';
+    font-weight: 400;
+    src: url('../fonts/hkgrotesk-light-webfont.woff2') format('woff2'),
+        url('../fonts/hkgrotesk-light-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'HK Grotesk Web';
+    font-weight: 600;
+    src: url('../fonts/hkgrotesk-medium-webfont.woff2') format('woff2'),
+        url('../fonts/hkgrotesk-medium-webfont.woff') format('woff');
+}
 /*------------------------------------*\
   #GENERIC
 \*------------------------------------*/
@@ -16,7 +27,7 @@ html {
     font-size: 16px;
     line-height: 1.5;
     font-family: Helvetica, arial, sans-serif;
-    color: #111;
+    color: #202024;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -36,7 +47,7 @@ html {
  */
 
 ::selection {
-    background: #e85e00;
+    background: #5051db;
     color: white;
     text-shadow: none;
 }
@@ -125,7 +136,7 @@ figcaption {
     font-size: 12px;
     line-height: 16px;
     margin-top: 8px;
-    color: #3C3C42;
+    color: #3c3c42;
 }
 
 hr {
@@ -136,18 +147,18 @@ hr {
 }
 
 a {
-    color: RoyalBlue;
-    transition: all .1s ease-in-out;
+    color: #5051db;
+    transition: all 0.1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: BlueViolet;
+    color: #3e3ea8;
 }
 
 a:hover,
 a:focus {
-    color: Crimson;
+    color: #3e3ea8;
 }
 
 /*------------------------------------*\
@@ -212,9 +223,9 @@ a:focus {
     flex-wrap: wrap;
 }
 
-    .o-layout__item {
-        flex-basis: 100%;
-    }
+.o-layout__item {
+    flex-basis: 100%;
+}
 
 /* gutter modifiers, these affect o-layout__item too */
 
@@ -554,7 +565,23 @@ a:focus {
         flex-basis: calc(100% / 6 * 5) !important;
     }
 }
+/*
+    Utilities: color
+    ---
+    Utility classes to put specific colors onto elements
+*/
 
+.u-color-primary-light {
+    color: #5051db;
+}
+
+.u-color-primary-base {
+    color: #202024;
+}
+
+.u-color-primary-dark {
+    color: #3e3ea8;
+}
 /*------------------------------------*\
   #MEDIA
 \*------------------------------------*/
@@ -610,18 +637,18 @@ a:focus {
         text-decoration: underline;
     }
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: ' (' attr(href) ')';
     }
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: ' (' attr(title) ')';
     }
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
+    a[href^='#']:after,
+    a[href^='javascript:']:after {
+        content: '';
     }
     pre {
         white-space: pre-wrap !important;
@@ -651,5 +678,19 @@ a:focus {
     h2,
     h3 {
         page-break-after: avoid;
+    }
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    h1,
+    h2,
+    h3 {
+        font-weight: 200;
+    }
+    .o-container {
+        max-width: 54.6em;
     }
 }
