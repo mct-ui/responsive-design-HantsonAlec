@@ -177,6 +177,9 @@ a:focus {
     display: flow-root;
 }
 
+.o-row—neutral-x-light {
+    background-color: #f7f7f7;
+}
 /* size modifiers */
 
 .o-row--lg {
