@@ -588,6 +588,67 @@ a:focus {
 .c-link-cta--inverse:hover::after {
     color: #fff;
 }
+/*
+    Component: footer
+    ---
+    Main footer of the website
+*/
+
+.c-footer {
+    font-size: 18px;
+    line-height: 24px;
+    position: relative;
+}
+
+.c-footer__logo {
+}
+
+.c-footer__nav {
+}
+
+@media (min-width: 768px) {
+    .c-logo {
+        height: 40px;
+    }
+    .c-footer {
+    }
+
+    .c-footer__logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .c-footer__nav {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-footer {
+    }
+
+    .c-footer__logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .c-footer__logo .c-logo {
+    }
+
+    .c-footer__nav {
+        justify-content: space-between;
+    }
+}
+.c-title-icon {
+    display: flex;
+}
+
+.c-title-icon__icon {
+    height: 6em;
+}
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
